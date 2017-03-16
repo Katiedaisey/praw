@@ -61,6 +61,7 @@ class MoreComments(PRAWBase):
             data = {'children': ','.join(self.children),
                     'link_id': self.submission.fullname,
                     'sort': self.submission.comment_sort}
+            print data
             self._comments = self._reddit.post(API_PATH['morechildren'],
                                                data=data)
             if update:
